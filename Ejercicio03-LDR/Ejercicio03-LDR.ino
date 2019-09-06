@@ -28,12 +28,15 @@ void loop() {
   //lcd.backlight();
   lcd.clear();
   lcd.setCursor(0,0);
-  lcd.print("Max: ");
+    lcd.print("Actual: ");
+lcd.print(sensorValue);
+lcd.setCursor(0,1);
+  lcd.print("Max:");
   lcd.print(maximo);
-  lcd.setCursor(0,1);
-  lcd.print("Min: ");
+  lcd.setCursor(8,1);
+  lcd.print("Min:");
   lcd.print(minimo);
-  delay(100);
+  delay(200);
   lcd.clear(); //ESTA LINEA HACÍA QUE NO ME FUNCIONARA EL PROGRAMA
  /*La linea anterior hacia que no funcionara porque estaba antes del delay
  * y limpiaba la pantalla primero y hacia el delay después
